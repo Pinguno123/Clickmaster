@@ -1,5 +1,14 @@
 <?php 
+$server = "localhost";
+$user = "root";
+$pass = "root";
+$database = "clickmaster";
 
-    $conexion =  new mysqli("root", "", "localhost", "Clickmaster");
+$connection = new mysqli($server, $user, $pass, $database);
 
+if ($connection->connect_error) {
+    die("Connection failed:" . $connection->connect_error);
+}
+
+$prueba = "Hola";
 ?>
